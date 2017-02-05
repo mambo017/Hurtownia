@@ -45,3 +45,11 @@
 	"adres.h"
 	"siec_hurtowni.h"
 
+1486325468 source:c:\users\bambus\c++ projekty\hurtownia2\funkcje_menu.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+	<vector>
+	"funkcje_menu.h"
+	"hurt_bud.h"
+

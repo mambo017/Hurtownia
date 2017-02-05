@@ -12,8 +12,8 @@ void pokazMenu()
 {
     cout<<"----------MENU-------------"<<endl;
     cout<<endl;
-    cout<< "1. Wyswietl dane hurtowni"<<endl;
-    cout<< "2. Dodaj hurtownie"<<endl;
+    cout<< "1. Dodaj hurtownie"<<endl;
+    cout<< "2. Wyswietl liste hurtowni"<<endl;
     cout<< "3. Dodaj klienta"<<endl;
     cout<< "4. Wyswietl liste klientow"<<endl;
     cout<< "5. Wyjscie"<<endl;
@@ -22,9 +22,15 @@ void pokazMenu()
 
 void wyswietlanieDanych()
 {
-    for (int i=0; i<listaHurtowni.size();i++){
-        listaHurtowni[i].wyswietlDaneHurtowni();
-        cout<<endl;
+    if (listaHurtowni.size() == 0) {
+        cout<< "Lista hurtowni jest pusta!!" <<endl;
+    }
+    else {
+
+        for (int i=0; i<listaHurtowni.size();i++){
+            listaHurtowni[i].wyswietlDaneHurtowni();
+            cout<<endl;
+        }
     }
 }
 
@@ -34,7 +40,7 @@ void dodajHurtownie()
     int tmpTel;
 
     cout<< "Dodawanie hurtowni: "<<endl;
-    cout<< "podaj nazwe ulicy: ";
+    cout<< "Ulica: ";
     cin.sync();
     getline(cin, tmpUl);
     cout<< "numer budynku: ";
@@ -68,11 +74,11 @@ void wybieranie()
     switch (wybor)
     {
     case 1:
-        cout<<endl;
-        wyswietlanieDanych();
+        dodajHurtownie();
         break;
     case 2:
-        dodajHurtownie();
+        cout<<endl;
+        wyswietlanieDanych();
         break;
 
     case 3:
@@ -87,7 +93,7 @@ void wybieranie()
     case 5:
         exit(0);
     default:
-    cout<<"nie ma takiej opcji. Podaj liczbe z menu!!"<<endl;
+    cout<<"nie ma takiej opcji. Podaj numer opcji z menu!!"<<endl;
 
 
     }
