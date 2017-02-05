@@ -4,8 +4,8 @@
 #include <vector>
 
 
-std::vector<Hurt_budowlana> listaHurtowni;
-Hurt_budowlana hb = Hurt_budowlana();
+//std::vector<Hurt_budowlana> listaHurtowni;
+//Hurt_budowlana hb = Hurt_budowlana();
 /*
 Hurt_budowlana h1("Centrala Gdansk","13-14-15-16",111222333);
 Hurt_budowlana h2("Odzial Gdynia","10-11-12-119",555222333);
@@ -15,7 +15,8 @@ listaHurtowni.push_back(h1);
 listaHurtowni.push_back(h2);
 listaHurtowni.push_back(h3); */
 
-void pokazMenu()
+void pokazMenu();
+/*
 {
     cout<<"----------MENU-------------"<<endl;
     cout<<endl;
@@ -25,7 +26,7 @@ void pokazMenu()
     cout<< "4. Wyswietl liste klientow"<<endl;
     cout<< "5. Wyjscie"<<endl;
     cout<<endl;
-}
+} */
 /*
 void dodAdresu()
 {
@@ -35,15 +36,17 @@ void dodAdresu()
     a2.showAdres();
 }*/
 
-void wyswietlanieDanych()
+void wyswietlanieDanych();
+/*
 {
     for (int i=0; i<listaHurtowni.size();i++){
         listaHurtowni[i].wyswietlDaneHurtowni();
         cout<<endl;
     }
-}
+} */
 
-void dodajHurtownie()
+void dodajHurtownie();
+/*
 {
     string tmpUl, tmpN, tmpM, tmpK, tmpNazwa, tmpX;
     int tmpTel;
@@ -73,8 +76,9 @@ void dodajHurtownie()
     listaHurtowni.push_back(nowa);
 
     //nowa.wyswietlDaneHurtowni();
-}
-void wybieranie()
+} */
+void wybieranie();
+/*
 {
     int wybor;
     cout<< "Wybierz numer z menu:"<<endl;
@@ -106,5 +110,5 @@ void wybieranie()
 
 
     }
-}
+} */
 
