@@ -5,18 +5,22 @@
 #include "funkcje_menu.h"
 #include "hurt_bud.h"
 
+
 std::vector<Hurt_budowlana> listaHurtowni;
 Hurt_budowlana hb = Hurt_budowlana();
 
 void pokazMenu()
 {
+    cout<<endl;
     cout<<"----------MENU-------------"<<endl;
     cout<<endl;
     cout<< "1. Dodaj hurtownie"<<endl;
     cout<< "2. Wyswietl liste hurtowni"<<endl;
     cout<< "3. Dodaj klienta"<<endl;
     cout<< "4. Wyswietl liste klientow"<<endl;
-    cout<< "5. Wyjscie"<<endl;
+    cout<< "5. Dodaj towar"<<endl;
+    cout<< "6. Wyswietl liste towarow"<<endl;
+    cout<< "7. Wyjscie"<<endl;
     cout<<endl;
 }
 
@@ -28,6 +32,7 @@ void wyswietlanieDanych()
     else {
 
         for (int i=0; i<listaHurtowni.size();i++){
+            cout<<i+1<<". ";
             listaHurtowni[i].wyswietlDaneHurtowni();
             cout<<endl;
         }
@@ -70,6 +75,7 @@ void wybieranie()
     int wybor;
     cout<< "Wybierz numer z menu:"<<endl;
     cin>> wybor;
+    cout<<endl;
 
     switch (wybor)
     {
@@ -91,6 +97,14 @@ void wybieranie()
         break;
 
     case 5:
+        hb.dodajTowar();
+        break;
+
+    case 6:
+        hb.wyswietlListeTowarow();
+        cout<< "==========="<<endl;
+        break;
+    case 7:
         exit(0);
     default:
     cout<<"nie ma takiej opcji. Podaj numer opcji z menu!!"<<endl;

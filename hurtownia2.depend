@@ -6,15 +6,17 @@
 1485714962 c:\users\bambus\c++ projekty\hurtownia2\adres.h
 	<string>
 
-1485621262 source:c:\users\bambus\c++ projekty\hurtownia2\hurt_bud.cpp
+1486388787 source:c:\users\bambus\c++ projekty\hurtownia2\hurt_bud.cpp
 	"hurt_bud.h"
 	<iostream>
+	<string>
 
-1486117356 c:\users\bambus\c++ projekty\hurtownia2\hurt_bud.h
+1486381792 c:\users\bambus\c++ projekty\hurtownia2\hurt_bud.h
 	<vector>
 	"adres.h"
 	"siec_hurtowni.h"
 	"klient.h"
+	"towar.h"
 
 1485547186 c:\users\bambus\c++ projekty\hurtownia2\siec_hurtowni.h
 	"adres.h"
@@ -27,29 +29,33 @@
 	"adres.h"
 	"klient.h"
 
-1486237125 source:c:\users\bambus\c++ projekty\hurtownia2\main.cpp
+1486325743 source:c:\users\bambus\c++ projekty\hurtownia2\main.cpp
 	<iostream>
 	"adres.h"
 	"siec_hurtowni.h"
 	"hurt_bud.h"
 	"funkcje_menu.h"
 
-1486302005 c:\users\bambus\c++ projekty\hurtownia2\funkcje_menu.h
+1486376786 c:\users\bambus\c++ projekty\hurtownia2\funkcje_menu.h
 	<iostream>
-	<cstdlib>
-	<string>
-	<vector>
 
 1485619208 source:c:\users\bambus\c++ projekty\hurtownia2\siec_hurtowni.cpp
 	<iostream>
 	"adres.h"
 	"siec_hurtowni.h"
 
-1486325468 source:c:\users\bambus\c++ projekty\hurtownia2\funkcje_menu.cpp
+1486386641 source:c:\users\bambus\c++ projekty\hurtownia2\funkcje_menu.cpp
 	<iostream>
 	<cstdlib>
 	<string>
 	<vector>
 	"funkcje_menu.h"
 	"hurt_bud.h"
+
+1486381792 c:\users\bambus\c++ projekty\hurtownia2\towar.h
+	<iostream>
+
+1486383404 source:c:\users\bambus\c++ projekty\hurtownia2\towar.cpp
+	<iostream>
+	"towar.h"
 

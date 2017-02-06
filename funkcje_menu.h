@@ -1,7 +1,7 @@
 #include <iostream>
-#include <cstdlib>
-#include <string>
-#include <vector>
+//#include <cstdlib>
+//#include <string>
+//#include <vector>
 
 
 //std::vector<Hurt_budowlana> listaHurtowni;

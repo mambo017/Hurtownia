@@ -1,5 +1,6 @@
 #include "hurt_bud.h"
 #include <iostream>
+#include <string>
 
 void Hurt_budowlana::wyswietlDaneHurtowni()
 {
@@ -23,7 +24,9 @@ void Hurt_budowlana::wyswietlListeKlientow() {
     }
     else {
         for (unsigned i=0; i<listaKlientow.size(); i++) {
+            cout<<i+1<<". ";
             listaKlientow[i].wyswietlDaneKlienta();
+            cout<<endl;
         }
     }
 }
@@ -53,8 +56,33 @@ void Hurt_budowlana::dodajKlienta() {
     Klient kl = Klient(imie, nazwisko, adres, nip, numerTelefonu);
     listaKlientow.push_back(kl);
 
-}   
+}
 
+void Hurt_budowlana::wyswietlListeTowarow() {
+    if (listaTowarow.size() == 0) {
+        cout<< "Lista towarow hurtowni jest pusta!!" <<endl;
+    }
+    else {
+        for (unsigned i=0; i<listaTowarow.size(); i++) {
+            cout<<i+1<<". ";
+            listaTowarow[i].wyswietlTowar();
+            cout<<endl;
+        }
+    }
+}
+
+void Hurt_budowlana::dodajTowar() {
+    string nazwaTowaru;
+
+    cout<< "Dodawanie towaru hurtowni: "<<endl;
+    cout<< "Podaj nazwe towaru: "<<endl;
+    cin.sync();
+    getline(cin, nazwaTowaru);
+
+    Towar t1 = Towar(nazwaTowaru);
+    listaTowarow.push_back(t1);
+
+}
 /*void Hurt_budowlana::dodaj()
 {
     string tmpUl, tmpN, tmpM, tmpK;

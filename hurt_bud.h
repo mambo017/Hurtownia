@@ -3,15 +3,16 @@
 #include "adres.h"
 #include "siec_hurtowni.h"
 #include "klient.h"
+#include "towar.h"
 
 class Hurt_budowlana : public Siec_hurtowni { //dziedziczenie publiczne
 
-    string nazwa; //odziedziczy atrybuty i metode wyswietlDaneHurtowni
+    string nazwa;
     std::vector<Klient> listaKlientow;
+    std::vector<Towar> listaTowarow;
 
 
 public:
-    //void dodajHurtownie();
 
     Hurt_budowlana();
     Hurt_budowlana(string,string, int);
@@ -20,8 +21,8 @@ public:
 
     void dodajKlienta();
 
-    //void usunKlienta();
-    //void edytujKlienta();
+    void wyswietlListeTowarow();
+    void dodajTowar();
 
     void wyswietlDaneHurtowni();
 

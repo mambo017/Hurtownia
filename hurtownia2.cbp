@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="adres.cpp" />
 		<Unit filename="adres.h" />
+		<Unit filename="funkcje_menu.cpp" />
 		<Unit filename="funkcje_menu.h" />
 		<Unit filename="hurt_bud.cpp" />
 		<Unit filename="hurt_bud.h" />
@@ -42,6 +43,8 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="siec_hurtowni.cpp" />
 		<Unit filename="siec_hurtowni.h" />
+		<Unit filename="towar.cpp" />
+		<Unit filename="towar.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
