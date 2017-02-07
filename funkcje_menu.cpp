@@ -9,10 +9,10 @@
 std::vector<Hurt_budowlana> listaHurtowni;
 Hurt_budowlana hb = Hurt_budowlana();
 
-void pokazMenu()
+void pokazMenuGlowne()
 {
     cout<<endl;
-    cout<<"----------MENU-------------"<<endl;
+    cout<<"----------MENU GLOWNE-------------"<<endl;
     cout<<endl;
     cout<< "1. Dodaj hurtownie"<<endl;
     cout<< "2. Wyswietl liste hurtowni"<<endl;
@@ -20,7 +20,21 @@ void pokazMenu()
     cout<< "4. Wyswietl liste klientow"<<endl;
     cout<< "5. Dodaj towar"<<endl;
     cout<< "6. Wyswietl liste towarow"<<endl;
-    cout<< "7. Wyjscie"<<endl;
+    cout<< "7. Przejdz do menu hurtowni"<<endl;
+    cout<< "8. Wyjscie"<<endl;
+    cout<<endl;
+}
+
+void pokazMenuHurtowni()
+{
+    cout<<endl;
+    cout<<"----------MENU HURTOWNI-------------"<<endl;
+    cout<<endl;
+    cout<< "1. Wyswietl liste klientow"<<endl;
+    cout<< "2. Wyswietl liste towarow"<<endl;
+    cout<< "3. Dodaj klienta"<<endl;
+    cout<< "4. Dodaj towar"<<endl;
+    cout<< "5. Wyjscie"<<endl;
     cout<<endl;
 }
 
@@ -70,9 +84,11 @@ void dodajHurtownie()
 
     //nowa.wyswietlDaneHurtowni();
 }
+
 void wybieranie()
 {
     int wybor;
+    int numerHurtowni;
     cout<< "Wybierz numer z menu:"<<endl;
     cin>> wybor;
     cout<<endl;
@@ -104,11 +120,63 @@ void wybieranie()
         hb.wyswietlListeTowarow();
         cout<< "==========="<<endl;
         break;
+    
     case 7:
+        cout<<"Do sieci hurtowni naleza:";
+        cout<<endl;
+        wyswietlanieDanych();
+        cout<<"Wybierz hurtownie: (numer z listy)";
+        cout<<endl;
+        cin>> numerHurtowni;
+        for(;;) {
+            pokazMenuHurtowni();
+            wybieranieMenuHurtowni(numerHurtowni);
+            cout<< "==========="<<endl;
+        }
+        break;
+
+    case 8:
         exit(0);
     default:
     cout<<"nie ma takiej opcji. Podaj numer opcji z menu!!"<<endl;
 
 
     }
+}
+
+void wybieranieMenuHurtowni(int n)
+{
+    int wybor;
+    cout<< "Wybierz operacje:"<<endl;
+    cin>> wybor;
+    cout<<endl;
+    n = n - 1;
+
+    switch (wybor)
+    {
+    case 1:
+        listaHurtowni[n].wyswietlListeKlientow();
+        break;
+    case 2:
+        cout<<endl;
+        listaHurtowni[n].wyswietlListeTowarow();
+        break;
+
+    case 3:
+        listaHurtowni[n].dodajKlienta();
+        break;
+
+    case 4:
+        listaHurtowni[n].dodajTowar();
+        cout<< "==========="<<endl;
+        break;
+
+    case 5:
+        break;
+
+    default:
+    cout<<"nie ma takiej opcji. Podaj numer opcji z menu!!"<<endl;
+
+    }
+
 }
