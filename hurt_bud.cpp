@@ -1,6 +1,7 @@
 #include "hurt_bud.h"
 #include <iostream>
 #include <string>
+#
 
 void Hurt_budowlana::wyswietlDaneHurtowni()
 {
