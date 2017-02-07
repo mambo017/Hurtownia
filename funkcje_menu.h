@@ -21,5 +21,5 @@ void dodajHurtownie();
 
 void wybieranie();
 
-void wybieranieMenuHurtowni(int n);
+void wybieranieMenuHurtowni(int n, bool b);
 

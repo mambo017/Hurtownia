@@ -34,7 +34,7 @@ void pokazMenuHurtowni()
     cout<< "2. Wyswietl liste towarow"<<endl;
     cout<< "3. Dodaj klienta"<<endl;
     cout<< "4. Dodaj towar"<<endl;
-    cout<< "5. Wyjscie"<<endl;
+    cout<< "5. Wyjscie do menu glownego"<<endl;
     cout<<endl;
 }
 
@@ -89,6 +89,7 @@ void wybieranie()
 {
     int wybor;
     int numerHurtowni;
+    bool koniec = false;
     cout<< "Wybierz numer z menu:"<<endl;
     cin>> wybor;
     cout<<endl;
@@ -128,11 +129,13 @@ void wybieranie()
         cout<<"Wybierz hurtownie: (numer z listy)";
         cout<<endl;
         cin>> numerHurtowni;
-        for(;;) {
+        cout<<endl;
+        //do {
             pokazMenuHurtowni();
-            wybieranieMenuHurtowni(numerHurtowni);
+            wybieranieMenuHurtowni(numerHurtowni, koniec);
             cout<< "==========="<<endl;
-        }
+            cout<< "Koniec to "<<koniec<<endl;
+        //} while (!koniec); 
         break;
 
     case 8:
@@ -144,7 +147,7 @@ void wybieranie()
     }
 }
 
-void wybieranieMenuHurtowni(int n)
+void wybieranieMenuHurtowni(int n, bool b)
 {
     int wybor;
     cout<< "Wybierz operacje:"<<endl;
@@ -172,6 +175,7 @@ void wybieranieMenuHurtowni(int n)
         break;
 
     case 5:
+        b = true;
         break;
 
     default:
