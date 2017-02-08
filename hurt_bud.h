@@ -5,7 +5,7 @@
 #include "klient.h"
 #include "towar.h"
 
-class Hurt_budowlana : public Siec_hurtowni { //dziedziczenie publiczne
+class Hurt_budowlana : public Siec_hurtowni {
 
     string nazwa;
     std::vector<Klient> listaKlientow;

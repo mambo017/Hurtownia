@@ -38,7 +38,7 @@ void pokazMenuHurtowni()
     cout<<endl;
 }
 
-void wyswietlanieDanych()
+void wyswietlanieListyHurtowni()
 {
     if (listaHurtowni.size() == 0) {
         cout<< "Lista hurtowni jest pusta!!" <<endl;
@@ -100,8 +100,9 @@ void wybieranie()
         dodajHurtownie();
         break;
     case 2:
+        cout<<"+++ Lista hurtowni +++"<<endl;
         cout<<endl;
-        wyswietlanieDanych();
+        wyswietlanieListyHurtowni();
         break;
 
     case 3:
@@ -109,6 +110,8 @@ void wybieranie()
         break;
 
     case 4:
+        cout<<"+++ Lista klientow +++"<<endl;
+        cout<<endl;
         hb.wyswietlListeKlientow();
         cout<< "==========="<<endl;
         break;
@@ -118,14 +121,16 @@ void wybieranie()
         break;
 
     case 6:
+        cout<<"+++ Lista towarow +++"<<endl;
+        cout<<endl;
         hb.wyswietlListeTowarow();
         cout<< "==========="<<endl;
         break;
-    
+
     case 7:
         cout<<"Do sieci hurtowni naleza:";
         cout<<endl;
-        wyswietlanieDanych();
+        wyswietlanieListyHurtowni();
         cout<<"Wybierz hurtownie: (numer z listy)";
         cout<<endl;
         cin>> numerHurtowni;
@@ -135,7 +140,7 @@ void wybieranie()
             wybieranieMenuHurtowni(numerHurtowni, koniec);
             cout<< "==========="<<endl;
             cout<< "Koniec to "<<koniec<<endl;
-        //} while (!koniec); 
+        //} while (!koniec);
         break;
 
     case 8:
@@ -158,9 +163,12 @@ void wybieranieMenuHurtowni(int n, bool b)
     switch (wybor)
     {
     case 1:
+        cout<<"+++ Lista klientow +++"<<endl;
+        cout<<endl;
         listaHurtowni[n].wyswietlListeKlientow();
         break;
     case 2:
+        cout<<"+++ Lista towarow +++"<<endl;
         cout<<endl;
         listaHurtowni[n].wyswietlListeTowarow();
         break;

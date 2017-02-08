@@ -83,32 +83,4 @@ void Hurt_budowlana::dodajTowar() {
     listaTowarow.push_back(t1);
 
 }
-/*void Hurt_budowlana::dodaj()
-{
-    string tmpUl, tmpN, tmpM, tmpK;
-    string tmpNazwa;
-    string tmpNip;
-    int tmpTel;
 
-    cout<< "Dodawanie hurtowni: "<<endl;
-    cout<< "podaj nazwê ulicy: "<<endl;
-    cin>> tmpUl;
-    cout<< "numer budynku: "<<endl;
-    cin>> tmpN;
-    cout<< "kod pocztowy: "<<endl;
-    cin>> tmpK;
-    cout<< "miasto: "<<endl;
-    cin>> tmpM;
-    cout<<"nazwa hurtowni/oddzia³u: "<<endl;
-    cin>> tmpNazwa;
-    cout<<"numer nip: "<<endl;
-    cin>>tmpNip;
-    cout<<"numer telefonu: "<<endl;
-    cin>>tmpTel;
-
-    Adres tmp(tmpUl, tmpN, tmpK, tmpM);
-    Hurt_budowlana nowa(tmpNazwa, tmpNip, tmpTel);
-    nowa.setAdres(tmp);
-    nowa.wyswietlDaneHurtowni();
-}
-*/

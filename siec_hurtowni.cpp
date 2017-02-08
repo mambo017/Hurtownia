@@ -4,7 +4,7 @@
 
 void Siec_hurtowni :: wyswietlDaneHurtowni()
 {
-    cout << "Hurtownia Budowlana "<< endl;
+    cout << endl;
     cout << "Adres Hurtowni:" <<endl;
     cout << "Ulica: " << adres.getUlica() << " "<< adres.getNumer() << endl;
     cout << "Miasto: " << adres.getMiasto() << endl;
