@@ -53,6 +53,23 @@ void wyswietlanieListyHurtowni()
     }
 }
 
+void wyswietlanieNazwHurtowni()
+{
+
+    if (listaHurtowni.size() == 0) {
+        cout<< "Lista hurtowni jest pusta!!" <<endl;
+    }
+    else {
+
+        for (int i=0; i<listaHurtowni.size();i++){
+            cout<<i+1<<". ";
+            cout<<listaHurtowni[i].getNazwa();
+            cout<<endl;
+        }
+    }
+
+}
+
 void dodajHurtownie()
 {
     string tmpUl, tmpN, tmpM, tmpK, tmpNazwa, tmpX;
@@ -69,8 +86,9 @@ void dodajHurtownie()
     cout<< "kod pocztowy: ";
     cin>> tmpK;
     cout<<"nazwa hurtowni/oddzialu: ";
-    cin.sync();
-    getline(cin, tmpNazwa);
+    //cin.sync();
+    //getline(cin, tmpNazwa);
+    cin>> tmpNazwa;
     cout<<"numer nip: ";
     cin>> tmpX;
     cout<<"numer telefonu: ";
@@ -82,14 +100,12 @@ void dodajHurtownie()
     nowa.setAdres(tmp);
     listaHurtowni.push_back(nowa);
 
-    //nowa.wyswietlDaneHurtowni();
 }
 
 void wybieranie()
 {
     int wybor;
     int numerHurtowni;
-    bool koniec = false;
     cout<< "Wybierz numer z menu:"<<endl;
     cin>> wybor;
     cout<<endl;
@@ -130,17 +146,12 @@ void wybieranie()
     case 7:
         cout<<"Do sieci hurtowni naleza:";
         cout<<endl;
-        wyswietlanieListyHurtowni();
+        wyswietlanieNazwHurtowni();
         cout<<"Wybierz hurtownie: (numer z listy)";
         cout<<endl;
         cin>> numerHurtowni;
         cout<<endl;
-        //do {
-            pokazMenuHurtowni();
-            wybieranieMenuHurtowni(numerHurtowni, koniec);
-            cout<< "==========="<<endl;
-            cout<< "Koniec to "<<koniec<<endl;
-        //} while (!koniec);
+        wybieranieMenuHurtowni(numerHurtowni);
         break;
 
     case 8:
@@ -152,43 +163,54 @@ void wybieranie()
     }
 }
 
-void wybieranieMenuHurtowni(int n, bool b)
+void wybieranieMenuHurtowni(int n)
 {
     int wybor;
-    cout<< "Wybierz operacje:"<<endl;
-    cin>> wybor;
-    cout<<endl;
+    bool koniec = false;
+
     n = n - 1;
 
-    switch (wybor)
-    {
-    case 1:
-        cout<<"+++ Lista klientow +++"<<endl;
-        cout<<endl;
-        listaHurtowni[n].wyswietlListeKlientow();
-        break;
-    case 2:
-        cout<<"+++ Lista towarow +++"<<endl;
-        cout<<endl;
-        listaHurtowni[n].wyswietlListeTowarow();
-        break;
+    do {
 
-    case 3:
-        listaHurtowni[n].dodajKlienta();
-        break;
+        pokazMenuHurtowni();
 
-    case 4:
-        listaHurtowni[n].dodajTowar();
+        cout<< "Wybierz operacje:"<<endl;
+        cin>> wybor;
+        cout<<endl;
+
+        switch (wybor)
+        {
+        case 1:
+            cout<<"+++ Lista klientow +++"<<endl;
+            cout<<endl;
+            listaHurtowni[n].wyswietlListeKlientow();
+            break;
+        case 2:
+            cout<<"+++ Lista towarow +++"<<endl;
+            cout<<endl;
+            listaHurtowni[n].wyswietlListeTowarow();
+            break;
+
+        case 3:
+            listaHurtowni[n].dodajKlienta();
+            break;
+
+        case 4:
+            listaHurtowni[n].dodajTowar();
+            cout<< "==========="<<endl;
+            break;
+
+        case 5:
+            koniec = true;
+            break;
+
+        default:
+        cout<<"nie ma takiej opcji. Podaj numer opcji z menu!!"<<endl;
+
+        }
+
         cout<< "==========="<<endl;
-        break;
 
-    case 5:
-        b = true;
-        break;
-
-    default:
-    cout<<"nie ma takiej opcji. Podaj numer opcji z menu!!"<<endl;
-
-    }
+    } while (!koniec);
 
 }

@@ -8,9 +8,11 @@ void pokazMenuHurtowni();
 
 void wyswietlanieListyHurtowni();
 
+void wyswietlanieNazwHurtowni();
+
 void dodajHurtownie();
 
 void wybieranie();
 
-void wybieranieMenuHurtowni(int n, bool b);
+void wybieranieMenuHurtowni(int n);
 
