@@ -9,7 +9,7 @@
 std::vector<Hurt_budowlana> listaHurtowni;
 Hurt_budowlana hb = Hurt_budowlana();
 
-Adres a1("Lipowa", "122B", "Gdansk","55-155");
+/*Adres a1("Lipowa", "122B", "Gdansk","55-155");
 Adres a2("Kasztanowa","110A", "Gdynia", "40-120");
 
 Hurt_budowlana h1("Centrala Gdansk","13-14-15-16",111222333);
@@ -17,6 +17,7 @@ h1.setAdres(a1);
 
 Hurt_budowlana h2("Odzial Gdynia","10-11-12-119",555222333);
 h2.setAdres(a2);
+*/
 
 void pokazMenuGlowne()
 {
@@ -80,7 +81,7 @@ void wyswietlanieNazwHurtowni()
 
 }
 
-/*void zainiciujPrzykladoweHurtownie()
+void zainiciujPrzykladoweHurtownie()
 {
     Adres a1("Lipowa", "122B", "Gdansk","55-155");
     Adres a2("Kasztanowa","110A", "Gdynia", "40-120");
@@ -93,7 +94,8 @@ void wyswietlanieNazwHurtowni()
     listaHurtowni.push_back(h1);
     listaHurtowni.push_back(h2);
 
-}*/
+}
+
 void dodajHurtownie()
 {
     string tmpUl, tmpN, tmpM, tmpK, tmpNazwa, tmpX;
@@ -179,11 +181,11 @@ void wybieranie()
 
     case 8:
         cout<<"+++Lista hurtowni+++"<<endl;
-        zainiciujPrzykladoweHurtownie()
-        {
+        zainiciujPrzykladoweHurtownie();
+        /*{
             listaHurtowni.push_back(h1);
             listaHurtowni.push_back(h2);
-        }
+        }*/
         break;
 
     case 9:
