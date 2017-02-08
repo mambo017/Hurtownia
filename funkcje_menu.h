@@ -4,6 +4,8 @@
 
 void pokazMenuGlowne();
 
+void zainiciujPrzykladoweHurtownie();
+
 void pokazMenuHurtowni();
 
 void wyswietlanieListyHurtowni();

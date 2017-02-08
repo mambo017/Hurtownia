@@ -4,10 +4,19 @@
 #include <vector>
 #include "funkcje_menu.h"
 #include "hurt_bud.h"
-
+#include "adres.h"
 
 std::vector<Hurt_budowlana> listaHurtowni;
 Hurt_budowlana hb = Hurt_budowlana();
+
+Adres a1("Lipowa", "122B", "Gdansk","55-155");
+Adres a2("Kasztanowa","110A", "Gdynia", "40-120");
+
+Hurt_budowlana h1("Centrala Gdansk","13-14-15-16",111222333);
+h1.setAdres(a1);
+
+Hurt_budowlana h2("Odzial Gdynia","10-11-12-119",555222333);
+h2.setAdres(a2);
 
 void pokazMenuGlowne()
 {
@@ -21,7 +30,8 @@ void pokazMenuGlowne()
     cout<< "5. Dodaj towar"<<endl;
     cout<< "6. Wyswietl liste towarow"<<endl;
     cout<< "7. Przejdz do menu hurtowni"<<endl;
-    cout<< "8. Wyjscie"<<endl;
+    cout<< "8. Zainiciuj przykladowe hurtownie"<<endl;
+    cout<< "9. Wyjscie"<<endl;
     cout<<endl;
 }
 
@@ -70,6 +80,20 @@ void wyswietlanieNazwHurtowni()
 
 }
 
+/*void zainiciujPrzykladoweHurtownie()
+{
+    Adres a1("Lipowa", "122B", "Gdansk","55-155");
+    Adres a2("Kasztanowa","110A", "Gdynia", "40-120");
+
+    Hurt_budowlana h1("Centrala Gdansk","13-14-15-16",111222333);
+    h1.setAdres(a1);
+
+    Hurt_budowlana h2("Odzial Gdynia","10-11-12-119",555222333);
+    h2.setAdres(a2);
+    listaHurtowni.push_back(h1);
+    listaHurtowni.push_back(h2);
+
+}*/
 void dodajHurtownie()
 {
     string tmpUl, tmpN, tmpM, tmpK, tmpNazwa, tmpX;
@@ -86,9 +110,8 @@ void dodajHurtownie()
     cout<< "kod pocztowy: ";
     cin>> tmpK;
     cout<<"nazwa hurtowni/oddzialu: ";
-    //cin.sync();
-    //getline(cin, tmpNazwa);
-    cin>> tmpNazwa;
+    cin.sync();
+    getline(cin, tmpNazwa);
     cout<<"numer nip: ";
     cin>> tmpX;
     cout<<"numer telefonu: ";
@@ -155,6 +178,15 @@ void wybieranie()
         break;
 
     case 8:
+        cout<<"+++Lista hurtowni+++"<<endl;
+        zainiciujPrzykladoweHurtownie()
+        {
+            listaHurtowni.push_back(h1);
+            listaHurtowni.push_back(h2);
+        }
+        break;
+
+    case 9:
         exit(0);
     default:
     cout<<"nie ma takiej opcji. Podaj numer opcji z menu!!"<<endl;
